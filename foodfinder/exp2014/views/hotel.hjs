@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  
+  <link rel="stylesheet" type="text/css" href="/stylesheets/hotelcss.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+  </script>
+
+  <script type='text/javascript' src="/javascripts/hotelJS.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?callback=main"
+        async defer></script>
+
+</head>
+
+
+<body>
+<h1 id="heading"></h1>
+  <div class="container">
+      <div class="info">
+
+          <h1><u>{{doc.name}}</u></h1>
+          <address value={{doc.longi_lati}}><b>Phone number:</b> (812) 333-1399
+          <b>Address:</b> {{doc.address}}
+          </address>
+
+
+
+       </div>
+
+       <div id="map" class="info">
+       </div>
+
+      <div class="reviews">
+
+           <div class="post">
+             <textarea class="comment" placeholder="Enter your review">
+             </textarea>
+             <button type="button" class="btn btn-info">
+                 Submit
+             </button>
+           </div>
+
+           <div class="list">
+             <h2 id="reviews">Latest Reviews</h2>
+             <ul class= "reviewlist">
+             </ul>
+           </div>
+       </div>
+
+   </div>
+
+</body>
+
+</html>
