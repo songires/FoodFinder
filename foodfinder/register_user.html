@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Foodfinder: User Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
+
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<!-- Google fonts -->
+
+<link rel="stylesheet" href="main_css.css"/>
+
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:600' rel='stylesheet' type='text/css'>
+
+<!-- font awesome -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- bootstrap -->
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+
+<!-- animate.css -->
+<link rel="stylesheet" href="assets/animate/animate.css" />
+<link rel="stylesheet" href="assets/animate/set.css" />
+
+<!-- gallery -->
+<link rel="stylesheet" href="assets/gallery/blueimp-gallery.min.css">
+
+<!-- favicon -->
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+
+<link rel="stylesheet" href="assets/style.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+  </script>
+
+  <script type='text/javascript' src="thebootstrapthemes-restaurant/assets/hotelJS.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?callback=main"
+        async defer></script>
+</head>
+
+<body>
+    <div class="navbar-wrapper" style="padding-bottom:100px">
+      <div class="container">
+
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="top-nav">
+          <div class="container">
+            <div class="navbar-header">
+              <!-- Logo Starts -->
+              <a class="navbar-brand">Food Finder</a>
+              <!-- #Logo Ends -->
+
+
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+            </div>
+
+
+            <!-- Nav Starts -->
+            <div class="navbar-collapse  collapse">
+              <ul class="nav navbar-nav navbar-right scroll">
+                <li><a href="Home.html" >Home</a></li>
+                <li><a href="Members_Area.php">Members Area</a></li>
+                <li><a href="Finder.html">Finder</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <!-- #Nav Ends -->
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+<article id="Registration">
+<script src="validation.js"></script>
+
+
+<div class="container">
+
+<div class="page-header">
+	<h2>New user??....Register Here!</h2>
+</div>
+
+<!-- Registration form - START -->
+<div class="container">
+    <div class="row">
+        <form id="form1" name="registration_form" onSubmit="return validate_form()" action="registration.php" method="post">
+		    <div class="col-lg-6">
+                <div class="well well-sm"><strong><span class="glyphicon glyphicon-asterisk"></span>Required Field</strong></div>
+                <div class="form-group">
+                    <label for="InputName">First Name</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="fname" id="fname" placeholder="First Name" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="InputName">Last Name</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="lname" id="lname" placeholder="Last Name" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="InputName">Username</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="username" id="Username" placeholder="Username" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="InputEmail">Enter Email</label>
+                    <div class="input-group">
+                        <input type="email" class="form-control" id="InputEmailFirst" name="InputEmail" placeholder="Enter Email" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="InputName">Password</label>
+                    <div class="input-group">
+                        <input type="password" class="form-control" id="pass1" type="password" placeholder="password" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                 <div class="form-group">
+                    <label for="InputName">Reenter Password</label>
+                    <div class="input-group">
+                        <input name="repassword" id="pass2" type="password" class="form-control" type="password" placeholder="password" required>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    </div>
+                </div>
+                
+                <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
+                <input type="reset" name="Reset" value="Reset Form" class="btn btn-danger pull-right" onClick="window.location.reload()">
+            </div>
+        </form>
+        
+    </div>
+</div>
+<!-- Registration form - END -->
+
+</div>
+
+</body>
+</html>
+
+
+
+
+
+<!--<footer id="footer">
+  	<p>External Links<p>
+  	<p>Original recipe and photos from: <a href="http://www.vegrecipesofindia.com/paneer-tikka-masala-recipe/">Veg Recipes of India</a></p        >
+  	<p>You can view the HTML Page with photos at: <a href="http://ella.ils.indiana.edu/~kmsheth/CSS_Competency/Paneer_Tikka_Masala.html"> Ella Server</a>       </p> 
+</footer>
+</body>
+</html>
+-->
